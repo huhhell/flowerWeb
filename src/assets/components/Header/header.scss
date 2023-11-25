@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+  &__shop {}
+  &__contact {}
+
+  &__account {
+    display: flex;
+    align-items: center;
+  }
+  &__signin {}
+  &__cart {}
+}
