@@ -2,18 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid #121212;
 
-  &__links {
+  &__links, &__account {
+    width: 25%;
     display: flex;
-    align-items: center;
   }
-  &__shop {}
-  &__contact {}
 
-  &__account {
-    display: flex;
-    align-items: center;
+  &__shop, &__contact, &__signin, &__cart {
+    height: 100%;
+    width: 50%;
+    padding: 32px 24px;
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.4px;
   }
-  &__signin {}
-  &__cart {}
+
+  &__shop, &__contact {
+    border-right: 1px solid #121212;
+  }
+
+  &__signin, &__cart {
+    border-left: 1px solid #121212;
+    background-color: #fff;
+  }
 }
