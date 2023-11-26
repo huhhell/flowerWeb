@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,6 +8,10 @@
   &__links, &__account {
     width: 25%;
     display: flex;
+
+    @media (max-width: 1400px) {
+      width: unset;
+    }
   }
 
   &__shop, &__contact, &__signin, &__cart {
@@ -18,10 +23,44 @@
     font-size: 16px;
     line-height: 120%;
     letter-spacing: 0.4px;
+
+    @media (max-width: 1400px) {
+      display: none;
+    }
+  }
+
+  &__menu-button {
+    display: none;
+    padding: 16px;
+    border-right: 1px solid #121212;
+    background: #fff;
+
+    @media (max-width: 1400px) {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      padding: 12px;
+    }
   }
 
   &__shop, &__contact {
     border-right: 1px solid #121212;
+  }
+
+  &__cart-button {
+    display: none;
+    padding: 16px;
+    border-left: 1px solid #121212;
+    background: #fff;
+
+    @media (max-width: 1400px) {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      padding: 12px;
+    }
   }
 
   &__signin, &__cart {
