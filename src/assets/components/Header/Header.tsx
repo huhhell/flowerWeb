@@ -18,9 +18,9 @@ interface IProps {
 
 export default function Header({itemsInCart}: IProps) {
     const [menuOpen, setMenuOpen] = useState(false);
-    function toggleMenu() {
-        return setMenuOpen(!menuOpen)
-    }
+    const [cartOpen, setCartOpen] = useState(false);
+    function toggleMenu() {setMenuOpen(!menuOpen)}
+    function toggleCart() {setCartOpen(!cartOpen)}
 
     return <header className='header'>
         <div className="header__links">
@@ -34,14 +34,14 @@ export default function Header({itemsInCart}: IProps) {
         </div>
         <div className="header__account">
             <button className="header__signin">Sign in</button>
-            <button className="header__cart">Cart</button>
+            <button className="header__cart" onClick={() => toggleCart()}>Cart</button>
 
 
-            <button className="header__cart-button">
+            <button className="header__cart-button" onClick={() => toggleCart()}>
                 <img src={cartImg} alt="open cart" className="header__cart-img"/>
             </button>
         </div>
         <Menu isMenuOpen={menuOpen} closeMenu={toggleMenu}/>
-        <Cart itemsInCart={itemsInCart} />
+        <Cart itemsInCart={itemsInCart} closeCart={() => toggleCart()} isCartOpen={cartOpen}/>
     </header>
 }
