@@ -5,14 +5,18 @@ import cartImg from './images/cart.svg';
 
 import Menu from "../Menu/Menu.tsx";
 import {useState} from "react";
+import Cart from "../Cart/Cart.tsx";
+import {IProduct} from "../../data/products.ts";
 
 
 
 
 
+interface IProps {
+    itemsInCart: IProduct[];
+}
 
-
-export default function Header() {
+export default function Header({itemsInCart}: IProps) {
     const [menuOpen, setMenuOpen] = useState(false);
     function toggleMenu() {
         return setMenuOpen(!menuOpen)
@@ -38,5 +42,6 @@ export default function Header() {
             </button>
         </div>
         <Menu isMenuOpen={menuOpen} closeMenu={toggleMenu}/>
+        <Cart itemsInCart={itemsInCart} />
     </header>
 }
