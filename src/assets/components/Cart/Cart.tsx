@@ -3,20 +3,23 @@ import {IProduct} from "../../data/products.ts";
 import './cart.scss';
 
 interface IProps {
-    itemsInCart: IProduct[]
+    itemsInCart: IProduct[];
+    isCartOpen: boolean;
+    closeCart: () => void;
 }
 
-export default function Cart({itemsInCart}: IProps) {
+export default function Cart({itemsInCart, isCartOpen, closeCart}: IProps) {
 
 
-    return <div className="cart">
+    return <div className={isCartOpen ? 'cart cart-active' : 'cart'}>
         <div className="cart__header">
             <h3 className="cart__title">Shopping Cart</h3>
-            <button className="cart__close">
+            <button className="cart__close" onClick={closeCart}>
                 <img src={closeImg} alt="close cart" className="cart__close-icon"/>
             </button>
         </div>
         <div className="cart__list">
+            {/*TODO add key prop*/}
             {itemsInCart.map((i: IProduct) => {
                 return <div className='cart__item'>
                     <div className="cart__item-product">
