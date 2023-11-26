@@ -1,0 +1,123 @@
+.cart {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  background: #ffffff;
+  width: 50%;
+  border: 1px solid #121212;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 29.5px 40px;
+    border-bottom: 1px solid #121212;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 120%;
+  }
+  &__close {
+    background: unset;
+  }
+  &__close-icon {
+    width: 24px;
+    height: 24px;
+  }
+  &__list {
+    padding: 40px;
+    border-bottom: 1px solid #121212;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-product {
+      display: flex;
+      align-items: center;
+    }
+
+    &-img {
+      width: 160px;
+      height: 160px;
+      border: 1px solid #121212;
+      margin-right: 16px;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &-title {
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    &-count {
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    &-price {
+      font-size: 18px;
+      line-height: 140%;
+    }
+    &-delete {
+      color: #808080;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: 0.4px;
+      background: unset;
+    }
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-bottom: 1px solid #121212;
+
+    &-title {
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    &-price {
+      text-align: right;
+      font-size: 21px;
+      line-height: 120%;
+    }
+  }
+
+  &__message {
+    padding: 40px;
+    height: 200px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 140%;
+    border-bottom: 1px solid #121212;
+  }
+
+  &__tip {
+    padding: 40px;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  &__checkout {
+    width: 100%;
+    padding: 16px 24px;
+    background: #121212;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.48px;
+  }
+
+}
