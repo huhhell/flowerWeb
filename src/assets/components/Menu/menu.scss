@@ -7,6 +7,7 @@
   background-color: #fff;
   border: 1px solid #121212;
   transform: translateY(0);
+  transition: all 0.3s ease-out;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -17,13 +18,20 @@
   }
 
   &__close {
-    padding: 12px 16px;
+    padding: 16px;
     border-bottom: 1px solid #121212;
+    width: 100%;
+    text-align: start;
+    background-color: #ffffff;
+
+    @media (max-width: 768px) {
+      padding: 12px 16px;
+    }
   }
 
   &__close-img {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 
     @media (max-width: 768px) {
       width: 24px;

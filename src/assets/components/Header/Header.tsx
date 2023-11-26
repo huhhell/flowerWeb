@@ -4,6 +4,7 @@ import cartImg from './images/cart.svg';
 
 
 import Menu from "../Menu/Menu.tsx";
+import {useState} from "react";
 
 
 
@@ -12,6 +13,10 @@ import Menu from "../Menu/Menu.tsx";
 
 
 export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    function toggleMenu() {
+        return setMenuOpen(!menuOpen)
+    }
 
     return <header className='header'>
         <div className="header__links">
@@ -19,7 +24,7 @@ export default function Header() {
             <a href="#" className="header__shop">Shop</a>
             <a href="#" className="header__contact">Contact</a>
 
-            <button className='header__menu-button'>
+            <button className='header__menu-button' onClick={() => toggleMenu()}>
                 <img src={menuImg} alt="open menu" className="header__menu-img"/>
             </button>
         </div>
@@ -32,6 +37,6 @@ export default function Header() {
                 <img src={cartImg} alt="open cart" className="header__cart-img"/>
             </button>
         </div>
-        <Menu isMenuOpen={false}/>
+        <Menu isMenuOpen={menuOpen} closeMenu={toggleMenu}/>
     </header>
 }

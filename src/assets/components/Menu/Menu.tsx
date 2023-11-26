@@ -21,9 +21,10 @@ interface IMenuSocial {
 
 interface IProps {
     isMenuOpen: boolean
+    closeMenu: () => void
 }
 
-export default function Menu({isMenuOpen}: IProps) {
+export default function Menu({isMenuOpen, closeMenu}: IProps) {
 
     const menuLinks: IMenuLink[] = [
         {href: '#', text: 'Sign in'},
@@ -41,9 +42,9 @@ export default function Menu({isMenuOpen}: IProps) {
     ]
 
     return <div className={isMenuOpen ? 'menu' : 'menu menu-closed'}>
-        <div className="menu__close">
+        <button className="menu__close" onClick={closeMenu}>
             <img src={closeImg} alt="close menu" className="menu__close-img"/>
-        </div>
+        </button>
         <div className="menu__links">
             {menuLinks.map((i) => <a href={i.href} className="menu__links-item">{i.text}</a>)}
         </div>
