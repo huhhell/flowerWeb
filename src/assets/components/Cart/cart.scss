@@ -5,6 +5,16 @@
   background: #ffffff;
   width: 50%;
   border: 1px solid #121212;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-out;
+
+  @media (max-width: 1000px) {
+    width: 101%;
+  }
+
+  &-active {
+    transform: translateY(0);
+  }
 
   &__header {
     display: flex;
@@ -12,6 +22,14 @@
     justify-content: space-between;
     padding: 29.5px 40px;
     border-bottom: 1px solid #121212;
+
+    @media (max-width: 1400px) {
+      padding: 16px;
+    }
+    
+    @media (max-width: 500px) {
+      padding: 12px 24px;
+    }
   }
 
   &__title {
@@ -28,15 +46,29 @@
   &__list {
     padding: 40px;
     border-bottom: 1px solid #121212;
+    
+    @media (max-width: 500px) {
+      padding: 24px 16px;
+    }
   }
   &__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 500px) {
+      align-items: end;
+    }
+
     &-product {
       display: flex;
       align-items: center;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+        gap: 16px;
+        align-items: start;
+      }
     }
 
     &-img {
@@ -44,6 +76,10 @@
       height: 160px;
       border: 1px solid #121212;
       margin-right: 16px;
+
+      @media (max-width: 500px) {
+        margin-right: 0;
+      }
     }
     &-info {
       display: flex;
@@ -82,6 +118,10 @@
     padding: 40px;
     border-bottom: 1px solid #121212;
 
+    @media (max-width: 500px) {
+      padding: 24px 16px;
+    }
+
     &-title {
       font-size: 18px;
       line-height: 140%;
@@ -101,6 +141,11 @@
     font-size: 16px;
     line-height: 140%;
     border-bottom: 1px solid #121212;
+
+    @media (max-width: 500px) {
+      padding: 24px 16px;
+      height: 148px;
+    }
   }
 
   &__tip {
@@ -108,6 +153,10 @@
     font-size: 14px;
     line-height: 120%;
     text-align: center;
+
+    @media (max-width: 500px) {
+      padding: 40px 16px;
+    }
   }
 
   &__checkout {
