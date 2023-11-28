@@ -13,10 +13,13 @@ export default function Intro() {
     return <div className='intro'>
         <div className="intro__company">
             <h1 className="intro__company-name">Kyiv LuxeBouquets</h1>
-            <p className="intro__company-text">Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our Online Flower Delivery Service</p>
+            <p className="intro__company-text">Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy
+                with Our Online Flower Delivery Service</p>
             <div className="intro__company-quote">
-                <img src={quoteImg} alt="black and white img of girl whose face coverd by white flowers" className="intro__company-quote-img" />
-                <p className="intro__company-quote-text">Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.</p>
+                <img src={quoteImg} alt="black and white img of girl whose face coverd by white flowers"
+                     className="intro__company-quote-img"/>
+                <p className="intro__company-quote-text">Experience the joy of giving with our modern floral studio.
+                    Order online and send fresh flowers, plants and gifts today.</p>
             </div>
         </div>
         <div className="intro__products">

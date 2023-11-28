@@ -4,7 +4,7 @@
   border-left: 1px solid #121212;
   border-right: 1px solid #121212;
   border-bottom: 1px solid #121212;
-  
+
   @media (max-width: 1050px) {
     display: block;
   }
@@ -57,6 +57,7 @@
         padding-bottom: 24px;
       }
     }
+
     &-quote {
       display: flex;
       width: 100%;
@@ -141,8 +142,9 @@
         font-size: 14px;
       }
     }
+
     &-arrow {
-      
+
       @media (max-width: 610px) {
         width: 16px;
         height: 16px;
