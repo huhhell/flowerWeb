@@ -1,0 +1,95 @@
+.intro {
+  display: flex;
+  align-items: start;
+  border-left: 1px solid #121212;
+  border-right: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+
+  &__company {
+    position: sticky;
+    top: 0;
+    width: 50%;
+    padding: 80px;
+
+    &-name {
+      font-size: 67px;
+      font-weight: 600;
+      line-height: 120%;
+      margin-bottom: 16px;
+    }
+
+    &-text {
+      color: rgba(18, 18, 18, 0.90);
+      font-size: 18px;
+      line-height: 140%;
+      padding-bottom: 54px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #121212;
+    }
+    &-quote {
+      display: flex;
+
+      &-img {
+        width: 256px;
+        height: 256px;
+        padding-right: 24px;
+        border-right: 1px solid #121212;
+      }
+      &-text {
+        padding-left: 24px;
+        align-self: end;
+        color: rgba(18, 18, 18, 0.90);
+        font-size: 14px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__products {
+    width: 50%;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+    gap: 1px;
+    border-left: 1px solid #121212;
+    background: #121212;
+
+    &-category {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: #ffffff;
+      aspect-ratio: 1 / 1;
+    }
+
+    &-title {
+      font-size: 38px;
+      line-height: 120%;
+    }
+
+    &-link {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    &-link-text {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: 0.4px;
+    }
+    &-arrow {}
+
+    &-img {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
