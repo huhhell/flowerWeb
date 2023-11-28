@@ -15,7 +15,7 @@ export default function Intro() {
             <h1 className="intro__company-name">Kyiv LuxeBouquets</h1>
             <p className="intro__company-text">Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our Online Flower Delivery Service</p>
             <div className="intro__company-quote">
-                <img src={quoteImg} alt="black and white img of girl whose face coverd by white flowers" className="intro__company-quote-img"/>
+                <img src={quoteImg} alt="black and white img of girl whose face coverd by white flowers" className="intro__company-quote-img" />
                 <p className="intro__company-quote-text">Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.</p>
             </div>
         </div>
@@ -34,8 +34,8 @@ export default function Intro() {
                 <h5 className="intro__products-title">Dried Flowers</h5>
                 {/*TODO add link to shop page*/}
                 <a href="#" className="intro__products-link">
-                    <p className="intro__products-link-text">Shop now</p>
                     <img src={arrowLeftImg} alt="arrow left" className="intro__products-arrow"/>
+                    <p className="intro__products-link-text">Shop now</p>
                 </a>
             </div>
             <div className="intro__products-category">
@@ -52,8 +52,8 @@ export default function Intro() {
                 <h5 className="intro__products-title">Aroma Candels</h5>
                 {/*TODO add link to shop page*/}
                 <a href="#" className="intro__products-link">
-                    <p className="intro__products-link-text">Shop now</p>
                     <img src={arrowLeftImg} alt="arrow left" className="intro__products-arrow"/>
+                    <p className="intro__products-link-text">Shop now</p>
                 </a>
             </div>
             <div className="intro__products-category">

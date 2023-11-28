@@ -4,6 +4,10 @@
   border-left: 1px solid #121212;
   border-right: 1px solid #121212;
   border-bottom: 1px solid #121212;
+  
+  @media (max-width: 1050px) {
+    display: block;
+  }
 
   &__company {
     position: sticky;
@@ -11,11 +15,30 @@
     width: 50%;
     padding: 80px;
 
+    @media (max-width: 1050px) {
+      position: unset;
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      padding: 8vw;
+    }
+
+    @media (max-width: 610px) {
+      padding: 40px 16px;
+    }
+
     &-name {
       font-size: 67px;
       font-weight: 600;
       line-height: 120%;
       margin-bottom: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 10vw;
+      }
     }
 
     &-text {
@@ -25,17 +48,32 @@
       padding-bottom: 54px;
       margin-bottom: 24px;
       border-bottom: 1px solid #121212;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 610px) {
+        padding-bottom: 24px;
+      }
     }
     &-quote {
       display: flex;
+      width: 100%;
+      overflow: hidden;
 
       &-img {
-        width: 256px;
-        height: 256px;
+        flex: 0 0 50%;
+        width: 50%;
+        height: auto;
+        object-fit: cover;
         padding-right: 24px;
         border-right: 1px solid #121212;
       }
+
       &-text {
+        flex: 0 0 50%;
+        width: 50%;
         padding-left: 24px;
         align-self: end;
         color: rgba(18, 18, 18, 0.90);
@@ -53,6 +91,12 @@
     border-left: 1px solid #121212;
     background: #121212;
 
+    @media (max-width: 1050px) {
+      width: unset;
+      border-top: 1px solid #121212;
+      border-left: unset;
+    }
+
     &-category {
       position: relative;
       display: flex;
@@ -61,11 +105,19 @@
       padding: 24px;
       background: #ffffff;
       aspect-ratio: 1 / 1;
+
+      @media (max-width: 610px) {
+        padding: 12px;
+      }
     }
 
     &-title {
       font-size: 38px;
       line-height: 120%;
+
+      @media (max-width: 610px) {
+        font-size: 6.2vw;
+      }
     }
 
     &-link {
@@ -78,13 +130,24 @@
       justify-content: center;
       gap: 4px;
     }
+
     &-link-text {
       font-size: 16px;
       font-weight: 600;
       line-height: 120%;
       letter-spacing: 0.4px;
+
+      @media (max-width: 610px) {
+        font-size: 14px;
+      }
     }
-    &-arrow {}
+    &-arrow {
+      
+      @media (max-width: 610px) {
+        width: 16px;
+        height: 16px;
+      }
+    }
 
     &-img {
       aspect-ratio: 1 / 1;
