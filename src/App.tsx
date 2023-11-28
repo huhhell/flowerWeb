@@ -3,6 +3,8 @@ import './index.scss'
 import Header from "./assets/components/Header/Header.tsx";
 import {useState} from "react";
 import productsList from "./assets/data/products.ts";
+import {BrowserRouter} from "react-router-dom";
+import Routes from "./assets/pages/Routes.tsx";
 
 
 function App() {
@@ -10,7 +12,10 @@ function App() {
 
   return (
     <div className='_container'>
-      <Header itemsInCart={itemsInCart}/>
+        <BrowserRouter>
+            <Header itemsInCart={itemsInCart}/>
+            <Routes />
+        </BrowserRouter>
     </div>
   )
 }
