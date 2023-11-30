@@ -1,0 +1,65 @@
+
+.wedding {
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(18, 18, 18, 0.40) 0%, rgba(18, 18, 18, 0.40) 100%), url('src/assets/components/Wedding/images/bgi.jpeg'), lightgray 0px -83.041px / 100% 130.833% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #121212;
+
+  @media (max-width: 650px) {
+    padding: 40px 16px;
+    height: unset;
+  }
+
+  &__subtitle {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @media (max-width: 650px) {
+      font-size: 12px;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 16px;
+
+    @media (max-width: 650px) {
+      text-align: center;
+      font-size: 34px;
+    }
+  }
+
+  &__text {
+    max-width: 586px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 64px;
+  }
+
+  &__inquire {
+    padding: 16px 24px;
+    border: 1px solid #ffffff;
+    background: unset;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.48px;
+
+    @media (max-width: 650px) {
+      width: 100%;
+    }
+  }
+}
