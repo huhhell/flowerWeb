@@ -4,6 +4,11 @@
   border-left: 1px solid #121212;
   border-right: 1px solid #121212;
   border-bottom: 1px solid #121212;
+  padding-top: 85px;
+
+  @media (max-width: 1400px) {
+    padding-top: 58px;
+  }
 
   @media (max-width: 1050px) {
     display: block;
