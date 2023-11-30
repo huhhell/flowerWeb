@@ -7,6 +7,7 @@
   border: 1px solid #121212;
   transform: translateY(-100%);
   transition: all 0.3s ease-out;
+  z-index: 10000;
 
   @media (max-width: 1000px) {
     width: 101%;
