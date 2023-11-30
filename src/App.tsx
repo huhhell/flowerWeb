@@ -5,6 +5,7 @@ import {useState} from "react";
 import productsList from "./assets/data/products.ts";
 import {BrowserRouter} from "react-router-dom";
 import Routes from "./assets/pages/Routes.tsx";
+import Footer from "./assets/components/Footer/Footer.tsx";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <BrowserRouter>
             <Header itemsInCart={itemsInCart}/>
             <Routes />
+            <Footer />
         </BrowserRouter>
     </div>
   )
