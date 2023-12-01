@@ -7,6 +7,7 @@ import category04Img from './images/category04.jpeg'
 import category05Img from './images/category05.jpeg'
 import arrowRightImg from './images/arrow-right.svg'
 import arrowLeftImg from './images/arrow-left.svg'
+import {Link} from "react-router-dom";
 
 export default function Intro() {
 
@@ -25,11 +26,14 @@ export default function Intro() {
         <div className="intro__products">
             <div className="intro__products-category">
                 <h5 className="intro__products-title">Fresh Flowers</h5>
-                {/*TODO add link to shop page*/}
-                <a href="#" className="intro__products-link">
+                <Link to='products' className='intro__products-link'>
                     <p className="intro__products-link-text">Shop now</p>
                     <img src={arrowRightImg} alt="arrow right" className="intro__products-arrow"/>
-                </a>
+                </Link>
+                {/*<a href="#" className="intro__products-link">*/}
+                {/*    <p className="intro__products-link-text">Shop now</p>*/}
+                {/*    <img src={arrowRightImg} alt="arrow right" className="intro__products-arrow"/>*/}
+                {/*</a>*/}
             </div>
             <img src={category01Img} alt="white flowers" className="intro__products-img"/>
             <img src={category02Img} alt="dried flowers" className="intro__products-img"/>
