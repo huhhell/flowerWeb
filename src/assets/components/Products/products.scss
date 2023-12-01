@@ -1,0 +1,79 @@
+.products {
+  padding-top: 84px;
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  border: 1px solid #121212;
+  background: #000;
+  gap: 1px;
+
+  &__title-container {
+    background: #ffffff;
+  }
+
+  &__title-items {
+    position: sticky;
+    top: 50px;
+  }
+
+  &__title-img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.7);
+  }
+  &__title {
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    color: #ffffff;
+    font-size: 67px;
+    text-align: center;
+  }
+
+  &__list {
+    background: #000000;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+    gap: 1px;
+  }
+
+  // TODO every img fix to top for a better view of name and price
+
+  &__item {
+    position: relative;
+    background: #ffffff;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+    &-img {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    &-name {
+      position: absolute;
+      bottom: 45px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+
+      font-size: 16px;
+      line-height: 120%;
+    }
+
+    &-price {
+      position: absolute;
+      bottom: 24px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      color: #808080;
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+
+}
