@@ -19,9 +19,8 @@ export default function Cart({itemsInCart, isCartOpen, closeCart}: IProps) {
             </button>
         </div>
         <div className="cart__list">
-            {/*TODO add key prop*/}
-            {itemsInCart.map((i: IProduct) => {
-                return <div className='cart__item'>
+            {itemsInCart.map((i: IProduct, id) => {
+                return <div className='cart__item' key={id}>
                     <div className="cart__item-product">
                         <img src={i.img} alt={i.alt} className="cart__item-img"/>
                         <div className="cart__item-info">
