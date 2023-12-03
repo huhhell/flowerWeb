@@ -46,7 +46,7 @@ export default function Menu({isMenuOpen, closeMenu}: IProps) {
             <img src={closeImg} alt="close menu" className="menu__close-img"/>
         </button>
         <div className="menu__links">
-            {menuLinks.map((i) => <a href={i.href} className="menu__links-item">{i.text}</a>)}
+            {menuLinks.map((i, id) => <a href={i.href} className="menu__links-item" key={id}>{i.text}</a>)}
         </div>
         <div className="menu__terms">
             <a href="#" className="menu__terms-item">Shipping & returns</a>
@@ -54,7 +54,7 @@ export default function Menu({isMenuOpen, closeMenu}: IProps) {
             <a href="#" className="menu__terms-item">Privacy policy</a>
         </div>
         <div className="menu__socials">
-            {socials.map(i => <a href={i.href} className="menu__socials-item">
+            {socials.map((i, id) => <a href={i.href} className="menu__socials-item" key={id}>
                 <img src={i.img} alt={i.alt} className='menu__socials-item-img'/>
             </a>)}
         </div>
