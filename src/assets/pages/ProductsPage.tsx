@@ -1,8 +1,12 @@
 import Products from "../components/Products/Products.tsx";
+import {IProduct} from "../data/products.ts";
 
-export default function ProductsPage() {
+interface IProps {
+    products: IProduct [];
+}
+export default function ProductsPage({products}: IProps) {
 
     return <>
-        <Products />
+        <Products products={products}/>
     </>
 }

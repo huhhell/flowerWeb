@@ -1,10 +1,16 @@
 import {Route, Routes} from "react-router-dom";
 import Main from "./Main.tsx";
 import ProductsPage from "./ProductsPage.tsx";
+import {IProduct} from "../data/products.ts";
 
-export default () => {
+
+interface IProps {
+    products: IProduct[]
+}
+
+export default ({products}: IProps) => {
     return <Routes>
         <Route path='/' element={<Main/>}/>
-        <Route path='/products' element={<ProductsPage />} />
+        <Route path='/products' element={<ProductsPage products={products}/>} />
     </Routes>
 }

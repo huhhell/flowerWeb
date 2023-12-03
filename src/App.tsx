@@ -10,12 +10,23 @@ import Footer from "./assets/components/Footer/Footer.tsx";
 
 function App() {
     const [itemsInCart, setItemsInCart] = useState(productsList.filter(i => i.count > 0))
+    function increaseProduct(id: number) {
+        let newProducts = [...itemsInCart];
+        newProducts[id].count++
+        setItemsInCart(newProducts)
+    }
+
+    function decreaseProduct(id: number) {
+        let newProducts = [...itemsInCart];
+        newProducts[id].count--
+        setItemsInCart(newProducts)
+    }
 
   return (
     <div className='_container'>
         <BrowserRouter>
             <Header itemsInCart={itemsInCart}/>
-            <Routes />
+            <Routes products={itemsInCart}/>
             <Footer />
         </BrowserRouter>
     </div>
