@@ -58,6 +58,9 @@ export default function Menu({isMenuOpen, closeMenu}: IProps) {
                 <img src={i.img} alt={i.alt} className='menu__socials-item-img'/>
             </a>)}
         </div>
-    {/*    TODO add blur*/}
+
+        {/*    TODO add blur*/}
+        {/*    TODO add clickAwayListener*/}
     </div>
+
 }

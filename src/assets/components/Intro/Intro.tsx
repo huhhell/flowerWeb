@@ -30,46 +30,38 @@ export default function Intro() {
                     <p className="intro__products-link-text">Shop now</p>
                     <img src={arrowRightImg} alt="arrow right" className="intro__products-arrow"/>
                 </Link>
-                {/*<a href="#" className="intro__products-link">*/}
-                {/*    <p className="intro__products-link-text">Shop now</p>*/}
-                {/*    <img src={arrowRightImg} alt="arrow right" className="intro__products-arrow"/>*/}
-                {/*</a>*/}
             </div>
             <img src={category01Img} alt="white flowers" className="intro__products-img"/>
             <img src={category02Img} alt="dried flowers" className="intro__products-img"/>
             <div className="intro__products-category">
                 <h5 className="intro__products-title">Dried Flowers</h5>
-                {/*TODO add link to shop page*/}
-                <a href="#" className="intro__products-link">
+                <Link to='products' className='intro__products-link'>
                     <img src={arrowLeftImg} alt="arrow left" className="intro__products-arrow"/>
                     <p className="intro__products-link-text">Shop now</p>
-                </a>
+                </Link>
             </div>
             <div className="intro__products-category">
                 <h5 className="intro__products-title">Live Plants</h5>
-                {/*TODO add link to shop page*/}
-                <a href="#" className="intro__products-link">
+                <Link to='products' className='intro__products-link'>
                     <p className="intro__products-link-text">Shop now</p>
                     <img src={arrowRightImg} alt="arrow right" className="intro__products-arrow"/>
-                </a>
+                </Link>
             </div>
             <img src={category03Img} alt="Live plant" className="intro__products-img"/>
             <img src={category04Img} alt="aroma candle" className="intro__products-img"/>
             <div className="intro__products-category">
                 <h5 className="intro__products-title">Aroma Candels</h5>
-                {/*TODO add link to shop page*/}
-                <a href="#" className="intro__products-link">
+                <Link to='products' className='intro__products-link'>
                     <img src={arrowLeftImg} alt="arrow left" className="intro__products-arrow"/>
                     <p className="intro__products-link-text">Shop now</p>
-                </a>
+                </Link>
             </div>
             <div className="intro__products-category">
                 <h5 className="intro__products-title">Fresheners</h5>
-                {/*TODO add link to shop page*/}
-                <a href="#" className="intro__products-link">
+                <Link to='products' className='intro__products-link'>
                     <p className="intro__products-link-text">Shop now</p>
                     <img src={arrowRightImg} alt="arrow right" className="intro__products-arrow"/>
-                </a>
+                </Link>
             </div>
             <img src={category05Img} alt="Fresheners" className="intro__products-img"/>
         </div>
