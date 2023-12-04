@@ -4,11 +4,10 @@ import {IProduct} from "../data/products.ts";
 interface IProps {
     products: IProduct [];
     addProduct: (id: number, count: number) => void;
-    removeProduct: (id: number) => void;
 }
-export default function ProductsPage({products, addProduct, removeProduct}: IProps) {
+export default function ProductsPage({products, addProduct}: IProps) {
 
     return <>
-        <Products products={products} addProduct={addProduct} removeProduct={removeProduct}/>
+        <Products products={products} addProduct={addProduct}/>
     </>
 }

@@ -18,17 +18,17 @@ function App() {
         setItemsInCart(newProducts)
     }
 
-    function decreaseProduct(id: number) {
+    function decreaseProduct(id: number, count: number) {
         let newProducts = [...itemsInCart];
-        newProducts[id].count--
+        newProducts[id].count -= count
         setItemsInCart(newProducts)
     }
 
   return (
     <div className='_container'>
         <BrowserRouter>
-            <Header itemsInCart={itemsInCart}/>
-            <Routes products={productsList} addProduct={increaseProduct} removeProduct={decreaseProduct}/>
+            <Header itemsInCart={itemsInCart} removeProduct={decreaseProduct}/>
+            <Routes products={productsList} addProduct={increaseProduct}/>
             <Footer />
         </BrowserRouter>
     </div>

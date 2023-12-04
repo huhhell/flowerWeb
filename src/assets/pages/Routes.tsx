@@ -7,12 +7,11 @@ import {IProduct} from "../data/products.ts";
 interface IProps {
     products: IProduct[];
     addProduct: (id: number, count: number) => void;
-    removeProduct: (id: number) => void;
 }
 
-export default ({products, addProduct, removeProduct}: IProps) => {
+export default ({products, addProduct}: IProps) => {
     return <Routes>
         <Route path='/' element={<Main/>}/>
-        <Route path='/products' element={<ProductsPage products={products} addProduct={addProduct} removeProduct={removeProduct}/>} />
+        <Route path='/products' element={<ProductsPage products={products} addProduct={addProduct}/>} />
     </Routes>
 }

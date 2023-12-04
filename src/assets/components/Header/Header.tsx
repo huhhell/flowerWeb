@@ -14,9 +14,10 @@ import {IProduct} from "../../data/products.ts";
 
 interface IProps {
     itemsInCart: IProduct[];
+    removeProduct: (id: number, count: number) => void;
 }
 
-export default function Header({itemsInCart}: IProps) {
+export default function Header({itemsInCart, removeProduct}: IProps) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [cartOpen, setCartOpen] = useState(false);
     function toggleMenu() {setMenuOpen(!menuOpen)}
@@ -42,6 +43,6 @@ export default function Header({itemsInCart}: IProps) {
             </button>
         </div>
         <Menu isMenuOpen={menuOpen} closeMenu={toggleMenu}/>
-        <Cart itemsInCart={itemsInCart} closeCart={() => toggleCart()} isCartOpen={cartOpen}/>
+        <Cart itemsInCart={itemsInCart} closeCart={() => toggleCart()} isCartOpen={cartOpen} removeProduct={removeProduct}/>
     </header>
 }

@@ -4,16 +4,16 @@ import './productPopup.scss';
 import {ClickAwayListener} from "@mui/base";
 import closeImg from '/src/assets/components/Menu/images/close.svg';
 
+// TODO add alert that product is added
 
 interface IProps {
     productsList: IProduct[],
     idOfProduct: number,
     closeProduct: () => void;
     addProduct: (id: number, count: number) => void;
-    removeProduct: (id: number) => void;
 }
 
-export default function ProductPopup({productsList, idOfProduct, closeProduct, addProduct, removeProduct}: IProps) {
+export default function ProductPopup({productsList, idOfProduct, closeProduct, addProduct}: IProps) {
     let item = productsList[idOfProduct];
 
     if (idOfProduct === -1) {

@@ -8,9 +8,10 @@ interface IProps {
     itemsInCart: IProduct[];
     isCartOpen: boolean;
     closeCart: () => void;
+    removeProduct: (id: number, count: number) => void;
 }
 
-export default function Cart({itemsInCart, isCartOpen, closeCart}: IProps) {
+export default function Cart({itemsInCart, isCartOpen, closeCart, removeProduct}: IProps) {
 
 
     return <div className={isCartOpen ? 'cart cart-active' : 'cart'}>
@@ -31,7 +32,7 @@ export default function Cart({itemsInCart, isCartOpen, closeCart}: IProps) {
                             <p className="cart__item-price">${i.price}</p>
                         </div>
                     </div>
-                    <button className="cart__item-delete">Remove</button>
+                    <button className="cart__item-delete" onClick={() => removeProduct(i.id, i.count)}>Remove</button>
                 </div>
             })}
         </div>
