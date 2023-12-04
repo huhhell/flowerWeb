@@ -1,0 +1,154 @@
+.product {
+  position: absolute;
+  z-index: 1000;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #121212;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #121212;
+
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  gap: 1px;
+  overflow: hidden;
+
+  &__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    aspect-ratio: 1 / 1;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    &-img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    padding: 40px;
+    background: #ffffff;
+  }
+  &__subtitle {
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    
+    &-gray {
+      color: #808080;
+    }
+  }
+  
+  &__name {
+    font-size: 38px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 24px;
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    
+    &-text {
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    &-change {
+      background: #121212;
+      display: grid;
+      grid-template: 1fr / repeat(3, 44px);
+      gap: 1px;
+      border: 1px solid #121212;
+    }
+    
+    &-decrease {
+      background: #ffffff;
+      font-size: 30px;
+      padding: 4px;
+      width: 44px;
+      height: 44px;
+    }
+    
+    &-current {
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      font-size: 20px;
+      text-align: center;
+      padding: 14px;
+    }
+    
+    &-increase {
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      font-size: 30px;
+      padding: 4px;
+    }
+  }
+
+  &__options {
+    margin-bottom: 40px;
+
+    &-text {
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 16px;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      &-checkbox {}
+      &-text {
+        font-size: 16px;
+        line-height: 140%;
+      }
+    }
+  }
+
+  &__add {
+    width: 100%;
+    background: #121212;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.48px;
+    padding: 16px 24px;
+  }
+
+  &::backdrop {
+    background: hsl(0 0% 0% / 50%);
+  }
+
+}
+

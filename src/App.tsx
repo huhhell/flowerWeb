@@ -26,7 +26,7 @@ function App() {
     <div className='_container'>
         <BrowserRouter>
             <Header itemsInCart={itemsInCart}/>
-            <Routes products={itemsInCart}/>
+            <Routes products={productsList}/>
             <Footer />
         </BrowserRouter>
     </div>
