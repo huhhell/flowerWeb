@@ -1,0 +1,52 @@
+.sub-about {
+  padding-top: 85.2px;
+  display: flex;
+  background: #121212;
+  gap: 1px;
+
+  &__img {
+    background: #ffffff;
+    width: 50%;
+  }
+  &__info {
+    width: 50%;
+    background: #ffffff;
+    padding: 80px;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 120%;
+    margin-left: -18px;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list-item {
+    list-style: circle;
+    font-size: 16px;
+    line-height: 140%;
+  }
+  &__explore {
+    margin-top: 40px;
+    display: block;
+    padding: 16px 24px;
+    max-width: 170px;
+    border: 1px solid #121212;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
