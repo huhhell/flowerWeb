@@ -56,7 +56,7 @@ export default function ProductPopup({productsList, idOfProduct, closeProduct}: 
                         <p className="product__options-text">Price options</p>
                         <div className="product__options-item">
                             <input type="radio" name='price' className="product__options-item-checkbox"
-                                   id='product__options-item-text'/>
+                                   id='product__options-item-text' checked/>
                             <label htmlFor="product__options-item-checkbox" className="product__options-item-text">One
                                 time purchase. Price ${item.price}</label>
                         </div>
