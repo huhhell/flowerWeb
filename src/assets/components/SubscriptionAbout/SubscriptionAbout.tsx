@@ -2,6 +2,8 @@ import mainImg from './images/image.jpeg'
 
 export default function SubscriptionAbout() {
 
+    // TODO change classes
+
     return <div className="about">
         <img src={mainImg} alt="gorl with postcard holding red flowers" className="about__img"/>
         <div className="about__info">
