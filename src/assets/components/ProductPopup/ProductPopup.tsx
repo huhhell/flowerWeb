@@ -4,8 +4,6 @@ import './productPopup.scss';
 import {ClickAwayListener} from "@mui/base";
 import closeImg from '/src/assets/components/Menu/images/close.svg';
 
-// TODO add alert that product is added
-
 interface IProps {
     productsList: IProduct[],
     idOfProduct: number,
@@ -14,13 +12,20 @@ interface IProps {
 }
 
 export default function ProductPopup({productsList, idOfProduct, closeProduct, addProduct}: IProps) {
-    let item = productsList[idOfProduct];
 
     if (idOfProduct === -1) {
         return <></>
     }
 
-    const [currentCount, setCurrentCount] = useState(0)
+    let item = productsList[idOfProduct];
+
+    const [currentCount, setCurrentCount] = useState(0);
+    const [isAlertShowed, setIsAlertShowed] = useState(false);
+
+    function showAddedAlert() {
+        setIsAlertShowed(true);
+        setTimeout(() => setIsAlertShowed(false), 2000)
+    }
 
     return <div className='product__container'>
         <ClickAwayListener onClickAway={closeProduct}>
@@ -43,7 +48,6 @@ export default function ProductPopup({productsList, idOfProduct, closeProduct, a
                     <div className="product__count">
                         <p className="product__count-text">Quantity</p>
                         <div className="product__count-change">
-                            {/*TODO add check for 0*/}
                             <button className="product__count-decrease"
                                     onClick={() => currentCount === 0 ? setCurrentCount(0) : setCurrentCount(currentCount - 1)}>
                                 –
@@ -69,8 +73,13 @@ export default function ProductPopup({productsList, idOfProduct, closeProduct, a
                                 now, and save 25% on this order. </label>
                         </div>
                     </div>
-                    <button className="product__add" onClick={() => addProduct(item.id, currentCount)}>add to cart</button>
+                    <button className="product__add" onClick={() => {
+                        addProduct(item.id, currentCount);
+                        showAddedAlert();
+                    }}>add to cart
+                    </button>
                 </div>
+                {isAlertShowed ? <p className='product__added'>Added to cart</p> : <></>}
             </div>
         </ClickAwayListener>
     </div>

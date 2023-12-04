@@ -201,8 +201,21 @@
     padding: 16px 24px;
   }
 
-  &::backdrop {
-    background: hsl(0 0% 0% / 50%);
+  &__added {
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background: rgba(128, 128, 128, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+
+    @media (max-width: 600px) {
+      bottom: unset;
+      top: 20px;
+      left: 50%;
+    }
   }
 
 }
