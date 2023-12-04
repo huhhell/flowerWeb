@@ -2,8 +2,6 @@ import closeImg from './images/close.svg';
 import {IProduct} from "../../data/products.ts";
 import './cart.scss';
 
-// TODO add space between elems in cart and check for an empty cart
-
 interface IProps {
     itemsInCart: IProduct[];
     isCartOpen: boolean;
@@ -22,7 +20,8 @@ export default function Cart({itemsInCart, isCartOpen, closeCart, removeProduct}
             </button>
         </div>
         <div className="cart__list">
-            {itemsInCart.filter(i => i.count > 0).map((i: IProduct, id) => {
+            { itemsInCart.filter(i => i.count > 0).length === 0 ? <p className="cart__empty">There are no products yet</p> :
+                itemsInCart.filter(i => i.count > 0).map((i: IProduct, id) => {
                 return <div className='cart__item' key={id}>
                     <div className="cart__item-product">
                         <img src={i.img} alt={i.alt} className="cart__item-img"/>
