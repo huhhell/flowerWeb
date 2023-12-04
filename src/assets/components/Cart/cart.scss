@@ -57,6 +57,10 @@
     align-items: center;
     justify-content: space-between;
 
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
     @media (max-width: 500px) {
       align-items: end;
     }
