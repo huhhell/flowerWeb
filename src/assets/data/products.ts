@@ -20,7 +20,7 @@ export interface IProduct {
 }
 
  const productsList: IProduct[] = [
-    {img: product01, alt:'flowers', title: 'Snowfall', price: 70, count: 1, topOffset: '0px', id: 0},
+    {img: product01, alt:'flowers', title: 'Snowfall', price: 70, count: 0, topOffset: '0px', id: 0},
     {img: product02, alt:'flowers', title: 'Dawn\'s Delight', price: 70, count: 0, topOffset: '-14px', id: 1},
     {img: product03, alt:'flowers', title: 'Pink Elegance', price: 70, count: 0, topOffset: '-55px', id: 2},
     {img: product04, alt:'flowers', title: 'Rustic Charm', price: 70, count: 0, topOffset: '-10px', id: 3},

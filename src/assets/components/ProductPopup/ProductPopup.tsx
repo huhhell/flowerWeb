@@ -8,10 +8,12 @@ import closeImg from '/src/assets/components/Menu/images/close.svg';
 interface IProps {
     productsList: IProduct[],
     idOfProduct: number,
-    closeProduct: () => void
+    closeProduct: () => void;
+    addProduct: (id: number, count: number) => void;
+    removeProduct: (id: number) => void;
 }
 
-export default function ProductPopup({productsList, idOfProduct, closeProduct}: IProps) {
+export default function ProductPopup({productsList, idOfProduct, closeProduct, addProduct, removeProduct}: IProps) {
     let item = productsList[idOfProduct];
 
     if (idOfProduct === -1) {
@@ -67,7 +69,7 @@ export default function ProductPopup({productsList, idOfProduct, closeProduct}: 
                                 now, and save 25% on this order. </label>
                         </div>
                     </div>
-                    <button className="product__add">add to cart</button>
+                    <button className="product__add" onClick={() => addProduct(item.id, currentCount)}>add to cart</button>
                 </div>
             </div>
         </ClickAwayListener>

@@ -6,9 +6,11 @@ import ProductPopup from "../ProductPopup/ProductPopup.tsx";
 
 interface IProps {
     products: IProduct[];
+    addProduct: (id: number, count: number) => void;
+    removeProduct: (id: number) => void;
 }
 
-export default function Products({products}: IProps) {
+export default function Products({products, addProduct, removeProduct}: IProps) {
     const [idOfOpenedProduct, setIdOfOpenedProduct] = useState(-1);
 
 
@@ -30,6 +32,6 @@ export default function Products({products}: IProps) {
             })}
         </div>
         <ProductPopup productsList={products} idOfProduct={idOfOpenedProduct}
-                      closeProduct={() => setIdOfOpenedProduct(-1)}/>
+                      closeProduct={() => setIdOfOpenedProduct(-1)} addProduct={addProduct} removeProduct={removeProduct}/>
     </div>
 }
