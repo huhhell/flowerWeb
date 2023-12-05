@@ -17,6 +17,14 @@ export default function SubSelectPlan() {
 
     const increaseCount = () => setCount(count + 1);
     const decreaseCount = () => count === 0 ? setCount(0) : setCount(count - 1);
+    const changeFrequency = (id: number) => {
+        let newFrequency = [...frequency];
+        for (let i of frequency) {
+            i.checked = false
+        }
+        newFrequency[id].checked = true;
+        setFrequency(newFrequency);
+    }
 
     return <div className='sub-plan'>
         <div className="sub-plan__info">
@@ -74,13 +82,18 @@ export default function SubSelectPlan() {
                 <p className="sub-plan__question-text">Select the delivery frequency</p>
                 <div className="sub-plan__question-options">
                     {/*TODO add onClick handler*/}
-                    {frequency.map(i => <button
-                        className={i.checked ? 'sub-plan__question-options-item-selected' : 'sub-plan__question-options-item'}>{i.name}</button>)}
+                    {frequency.map((i, id) => <button
+                        className={i.checked ? 'sub-plan__question-options-item-selected' : 'sub-plan__question-options-item'}
+                        key={id}
+                        onClick={() => changeFrequency(id)}>
+                        {i.name}
+                    </button>)}
                 </div>
             </div>
             <div className="sub-plan__question">
                 <h5 className="sub-plan__question-title">How many deliveries would you like ?</h5>
-                <p className="sub-plan__question-text">Pay once and do not worry about flowers, our bouquets will be beautiful and on time, as many times as you need </p>
+                <p className="sub-plan__question-text">Pay once and do not worry about flowers, our bouquets will be
+                    beautiful and on time, as many times as you need </p>
                 <div className="sub-plan__question-counter">
                     <button className="sub-plan__question-decrease" onClick={decreaseCount}>–</button>
                     <p className="sub-plan__question-value">{count}</p>
