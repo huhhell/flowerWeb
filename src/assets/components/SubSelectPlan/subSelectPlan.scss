@@ -90,7 +90,8 @@
       margin-bottom: 16px;
     }
 
-    &-list {}
+    &-list {
+    }
 
     &-list-item {
       list-style: disc;
@@ -102,6 +103,7 @@
         margin-bottom: 4px;
       }
     }
+
     &-button {
       grid-area: btn;
       background: #121212;
@@ -161,6 +163,7 @@
         }
 
       }
+
       &-item-selected {
         flex: 0 1 33.3%;
         padding: 16px 24px;
