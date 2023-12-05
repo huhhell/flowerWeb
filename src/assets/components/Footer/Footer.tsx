@@ -6,6 +6,8 @@ import telegramImg from './images/Telegram.svg';
 
 import './footer.scss'
 
+// TODO fix footer. Its not 50 / 50 width.
+
 export default function Footer() {
 
     return <footer className='footer'>
