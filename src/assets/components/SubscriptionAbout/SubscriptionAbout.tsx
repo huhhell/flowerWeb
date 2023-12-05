@@ -6,7 +6,9 @@ export default function SubscriptionAbout() {
     // TODO change classes
 
     return <div className="sub-about">
-        <img src={mainImg} alt="gorl with postcard holding red flowers" className="sub-about__img"/>
+        <div className="sub-about__img">
+            <img src={mainImg} alt="gorl with postcard holding red flowers" className="sub-about__img-item"/>
+        </div>
         <div className="sub-about__info">
             <h1 className="sub-about__title">Flower Subscription</h1>
             <h6 className="sub-about__subtitle">For Yourself</h6>

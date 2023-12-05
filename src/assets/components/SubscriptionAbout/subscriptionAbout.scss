@@ -3,15 +3,71 @@
   display: flex;
   background: #121212;
   gap: 1px;
+  border: 1px solid #121212;
+  
+  @media (max-width: 1400px) {
+    padding-top: 57px;
+  }
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
 
   &__img {
+    flex: 0 0 50%;
+    position: relative;
     background: #ffffff;
     width: 50%;
+    overflow: hidden;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      min-height: 500px;
+    }
+
+    &-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+
+      @media (max-width: 1380px) {
+        height: 100%;
+        width: unset;
+      }
+
+      @media (max-width: 1000px) {
+        height: unset;
+        width: 100%;
+        border: 1px solid #121212;
+      }
+
+      @media (max-width: 505px) {
+        height: 100%;
+        width: unset;
+      }
+    }
   }
+
   &__info {
+    flex: 0 0 50%;
     width: 50%;
     background: #ffffff;
     padding: 80px;
+    overflow: hidden;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+
+    @media (max-width: 550px) {
+      padding: 40px 16px;
+    }
   }
 
   &__title {
@@ -19,6 +75,10 @@
     font-weight: 600;
     line-height: 120%;
     margin-bottom: 24px;
+
+    @media (max-width: 550px) {
+      font-size: 34px;
+    }
   }
 
   &__subtitle {
@@ -26,6 +86,10 @@
     line-height: 120%;
     margin-left: -18px;
     margin-bottom: 10px;
+
+    @media (max-width: 550px) {
+      margin-left: 0;
+    }
   }
 
   &__list {
@@ -39,6 +103,10 @@
     list-style: circle;
     font-size: 16px;
     line-height: 140%;
+
+    @media (max-width: 550px) {
+      margin-left: 18px;
+    }
   }
   &__explore {
     margin-top: 40px;
@@ -48,5 +116,10 @@
     border: 1px solid #121212;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: 550px) {
+      width: 100%;
+      max-width: unset;
+    }
   }
 }
