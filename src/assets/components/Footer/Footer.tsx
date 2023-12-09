@@ -5,6 +5,7 @@ import twitterImg from './images/Twitter.svg';
 import telegramImg from './images/Telegram.svg';
 
 import './footer.scss'
+import {Link} from "react-router-dom";
 
 // TODO fix footer. Its not 50 / 50 width.
 
@@ -46,16 +47,16 @@ export default function Footer() {
         </div>
         <div className="footer__links">
             <h5 className="footer__title">Shop</h5>
-            <a href="#" className="footer__links-item">All Products</a>
-            <a href="#" className="footer__links-item">Fresh Flowers</a>
-            <a href="#" className="footer__links-item">Dried Flowers</a>
-            <a href="#" className="footer__links-item">Live Plants</a>
-            <a href="#" className="footer__links-item">Designer Vases</a>
-            <a href="#" className="footer__links-item">Aroma Candles</a>
-            <a href="#" className="footer__links-item">Freshener Diffuser</a>
+            <Link to='products' className='footer__links-item'>All Products</Link>
+            <Link to='products' className='footer__links-item'>Fresh Flowers</Link>
+            <Link to='products' className='footer__links-item'>Dried Flowers</Link>
+            <Link to='products' className='footer__links-item'>Live Plants</Link>
+            <Link to='products' className='footer__links-item'>Designer Vases</Link>
+            <Link to='products' className='footer__links-item'>Aroma Candles</Link>
+            <Link to='products' className='footer__links-item'>Freshener Diffuser</Link>
             <h5 className="footer__title footer__links-title">Service</h5>
-            <a href="#" className="footer__links-item">Flower Subscription</a>
-            <a href="#" className="footer__links-item">Wedding & Event Decor</a>
+            <Link to='subscription' className='footer__links-item'>Flower Subscription</Link>
+            <Link to='subscription' className='footer__links-item'>Wedding & Event Decor</Link>
         </div>
         <div className="footer__about">
             <h5 className="footer__title">About Us</h5>

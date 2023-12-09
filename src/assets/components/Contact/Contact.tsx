@@ -13,7 +13,7 @@ import './contact.scss';
 // TODO rewrite this block
 export default function Contact() {
 
-    return <div className='contact'>
+    return <div className='contact' id='contact'>
         <div className="contact__info">
             <div className="contact__form-block">
                 <h2 className="contact__title">To Contact Us</h2>
