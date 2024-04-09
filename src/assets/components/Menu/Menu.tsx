@@ -7,6 +7,7 @@ import telegramImg from './images/telegram.svg';
 
 import './menu.scss';
 import {Link} from "react-router-dom";
+import {useOutsideClick} from "../../hooks/useOutsideClick.tsx";
 
 
 interface IMenuLink {
@@ -26,6 +27,9 @@ interface IProps {
 }
 
 export default function Menu({isMenuOpen, closeMenu}: IProps) {
+    const ref = useOutsideClick(() => {
+        if (isMenuOpen) {closeMenu()}
+    });
 
     const menuLinks: IMenuLink[] = [
         {href: '#', text: 'Sign in'},
@@ -42,7 +46,7 @@ export default function Menu({isMenuOpen, closeMenu}: IProps) {
         {href: '#', img: telegramImg, alt: 'telegram'},
     ]
 
-    return <div className={isMenuOpen ? 'menu' : 'menu menu-closed'}>
+    return <div className={isMenuOpen ? 'menu' : 'menu menu-closed'} ref={ref}>
         <button className="menu__close" onClick={closeMenu}>
             <img src={closeImg} alt="close menu" className="menu__close-img"/>
         </button>
@@ -61,7 +65,6 @@ export default function Menu({isMenuOpen, closeMenu}: IProps) {
         </div>
 
         {/*    TODO add blur*/}
-        {/*    TODO add clickAwayListener*/}
     </div>
 
 }
