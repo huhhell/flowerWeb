@@ -18,7 +18,6 @@ export default function Products({products, addProduct}: IProps) {
         <div className="products__title-container">
             <div className="products__title-items">
                 <img src={bgImg} alt="bg img" className="products__title-img"/>
-                {/*TODO fix this text, when width is 1200 its in the bottom*/}
                 <h2 className="products__title">Fresh Flowers</h2>
             </div>
         </div>

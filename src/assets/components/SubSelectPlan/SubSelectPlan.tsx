@@ -81,7 +81,6 @@ export default function SubSelectPlan() {
                 <h5 className="sub-plan__question-title">How often do you want flowers delivered ?</h5>
                 <p className="sub-plan__question-text">Select the delivery frequency</p>
                 <div className="sub-plan__question-options">
-                    {/*TODO add onClick handler*/}
                     {frequency.map((i, id) => <button
                         className={i.checked ? 'sub-plan__question-options-item-selected' : 'sub-plan__question-options-item'}
                         key={id}

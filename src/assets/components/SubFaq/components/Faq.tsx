@@ -21,5 +21,3 @@ export default function Faq({faq}: IProps) {
         <dd className={isOpen ? "sub-faq__answer" : "sub-faq__answer-hidden"}>{faq.answer}</dd>
     </div>
 }
-
-//TODO check colors with mac bc monitor displays them wrong

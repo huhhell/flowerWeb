@@ -3,8 +3,6 @@ import './subscriptionAbout.scss';
 
 export default function SubscriptionAbout() {
 
-    // TODO change classes
-
     return <div className="sub-about">
         <div className="sub-about__img">
             <img src={mainImg} alt="gorl with postcard holding red flowers" className="sub-about__img-item"/>
@@ -34,7 +32,6 @@ export default function SubscriptionAbout() {
                 </li>
             </ul>
 
-            {/*TODO add anchor*/}
             <a href='#' className='sub-about__explore'>Explore plans</a>
         </div>
     </div>
