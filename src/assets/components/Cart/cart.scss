@@ -11,6 +11,8 @@
 
   @media (max-width: 1000px) {
     width: 101%;
+    height: 100vh;
+    overflow: scroll;
   }
 
   &-active {
