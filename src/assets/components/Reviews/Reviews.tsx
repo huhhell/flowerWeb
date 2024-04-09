@@ -72,7 +72,7 @@ export default function Reviews() {
             </button>
         </div>
         <div className="reviews__dots">
-            {dots.map(i => i ? <div className='reviews__dots-item-active'></div> : <div className='reviews__dots-item'></div>)}
+            {dots.map((i, id) => i ? <div className='reviews__dots-item-active' key={id}></div> : <div className='reviews__dots-item' key={id}></div>)}
         </div>
         <a href="#" className="reviews__all">Read reviews</a>
     </div>
