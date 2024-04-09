@@ -26,10 +26,8 @@ export default function Header({itemsInCart, removeProduct}: IProps) {
 
     return <header className='header'>
         <div className="header__links">
-            {/*TODO add href*/}
             <Link to='products' className='header__shop'>Shop</Link>
-            {/*<a href="#" className="header__shop">Shop</a>*/}
-            <a href="#contact" className="header__contact">Contact</a>
+            <a href="#" className="header__contact">Contact</a>
 
             <button className='header__menu-button' onClick={() => toggleMenu()}>
                 <img src={menuImg} alt="open menu" className="header__menu-img"/>

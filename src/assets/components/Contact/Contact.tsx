@@ -10,7 +10,6 @@ import telegramImg from './images/Telegram.svg';
 import './contact.scss';
 
 
-// TODO rewrite this block
 export default function Contact() {
 
     return <div className='contact' id='contact'>
