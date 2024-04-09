@@ -1,6 +1,7 @@
 import closeImg from './images/close.svg';
 import {IProduct} from "../../data/products.ts";
 import './cart.scss';
+import {useOutsideClick} from "../../hooks/useOutsideClick.tsx";
 
 interface IProps {
     itemsInCart: IProduct[];
@@ -10,9 +11,12 @@ interface IProps {
 }
 
 export default function Cart({itemsInCart, isCartOpen, closeCart, removeProduct}: IProps) {
+    const cart = useOutsideClick(() => {
+        if (isCartOpen) closeCart();
+    });
 
 
-    return <div className={isCartOpen ? 'cart cart-active' : 'cart'}>
+    return <div className={isCartOpen ? 'cart cart-active' : 'cart'} ref={cart}>
         <div className="cart__header">
             <h3 className="cart__title">Shopping Cart</h3>
             <button className="cart__close" onClick={closeCart}>
