@@ -6,6 +6,7 @@ import twitterImg from './images/twitter.svg';
 import telegramImg from './images/telegram.svg';
 
 import './menu.scss';
+import {Link} from "react-router-dom";
 
 
 interface IMenuLink {
@@ -28,8 +29,8 @@ export default function Menu({isMenuOpen, closeMenu}: IProps) {
 
     const menuLinks: IMenuLink[] = [
         {href: '#', text: 'Sign in'},
-        {href: '#', text: 'Shop'},
-        {href: '#', text: 'Service'},
+        {href: 'products', text: 'Shop'},
+        {href: 'subscription', text: 'Service'},
         {href: '#', text: 'Contact'},
         {href: '#', text: 'About us'}]
 
@@ -46,7 +47,7 @@ export default function Menu({isMenuOpen, closeMenu}: IProps) {
             <img src={closeImg} alt="close menu" className="menu__close-img"/>
         </button>
         <div className="menu__links">
-            {menuLinks.map((i, id) => <a href={i.href} className="menu__links-item" key={id}>{i.text}</a>)}
+            {menuLinks.map((i, id) => <Link to={i.href} className="menu__links-item" key={id}>{i.text}</Link>)}
         </div>
         <div className="menu__terms">
             <a href="#" className="menu__terms-item">Shipping & returns</a>

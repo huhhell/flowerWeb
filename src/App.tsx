@@ -8,7 +8,7 @@ import Routes from "./assets/pages/Routes.tsx";
 import Footer from "./assets/components/Footer/Footer.tsx";
 
 
-// .filter(i => i.count > 0)
+// todo fix links
 
 function App() {
     const [itemsInCart, setItemsInCart] = useState(productsList)
